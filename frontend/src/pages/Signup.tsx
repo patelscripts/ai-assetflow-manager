@@ -33,13 +33,13 @@ const Signup = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="bg-white shadow-md rounded-xl p-8 w-full max-w-md">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex flex-col items-center gap-2 mb-6">
           <Package className="text-indigo-600" size={28} />
           <h1 className="text-2xl font-bold text-gray-900">AssetFlow</h1>
         </div>
 
-        <h2 className="text-lg font-semibold text-gray-800 mb-1">Create account</h2>
-        <p className="text-sm text-gray-500 mb-6">Sign up as an Employee</p>
+        <h2 className="text-lg font-semibold text-gray-800 mb-1 text-center">Create account</h2>
+        <p className="text-sm text-gray-500 mb-6 text-center">Sign up as an Employee</p>
 
         {error && (
           <div className="bg-red-50 text-red-600 text-sm px-3 py-2 rounded-md mb-4">
@@ -97,7 +97,7 @@ const Signup = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition disabled:opacity-50"
+            className="w-full cursor-pointer bg-indigo-600 text-white py-2 rounded-md hover:bg-indigo-700 transition disabled:opacity-50"
           >
             {loading ? 'Creating account...' : 'Sign up'}
           </button>

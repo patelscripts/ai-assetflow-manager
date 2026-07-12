@@ -87,7 +87,7 @@ const Allocations = () => {
         {canManage && (
           <button
             onClick={() => setShowForm(true)}
-            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition"
+            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition cursor-pointer"
           >
             <Plus size={18} />
             Allocate Asset
@@ -133,7 +133,7 @@ const Allocations = () => {
                       {a.status === 'Active' && (
                         <button
                           onClick={() => handleReturn(a._id)}
-                          className="text-indigo-600 text-xs font-medium hover:underline"
+                          className="text-indigo-600 text-xs font-medium hover:underline cursor-pointer"
                         >
                           Mark Returned
                         </button>

@@ -92,7 +92,7 @@ const Assets = () => {
         {canManage && (
           <button
             onClick={() => setShowForm(true)}
-            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition"
+            className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition cursor-pointer"
           >
             <Plus size={18} />
             Register Asset
@@ -157,7 +157,7 @@ const Assets = () => {
       {showForm && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 px-4">
           <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between mb-4 ">
               <h2 className="text-lg font-semibold text-gray-900">Register Asset</h2>
               <button onClick={() => setShowForm(false)} className="text-gray-400 hover:text-gray-600">
                 <X size={20} />
