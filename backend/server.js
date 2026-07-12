@@ -11,6 +11,7 @@ import allocationRoutes from './routes/allocation.js';
 import dashboardRoutes from './routes/dashboard.js';
 import bookingRoutes from './routes/booking.js';
 import userRoutes from './routes/users.js';
+import maintenanceRoutes from './routes/maintenance.js';
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/api/allocations', allocationRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/maintenance', maintenanceRoutes);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, ()=>{

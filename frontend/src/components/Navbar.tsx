@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Package, Users, Calendar, LogOut } from 'lucide-react';
+import { LayoutDashboard, Package, Users, Calendar, LogOut,Wrench } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
     { path: '/assets', label: 'Assets', icon: Package },
     { path: '/allocations', label: 'Allocations', icon: Users },
     { path: '/bookings', label: 'Bookings', icon: Calendar },
+    { path: '/maintenance', label: 'Maintenance', icon: Wrench},
   ];
 
   return (

@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Assets from './pages/Assets';
 import Allocations from './pages/Allocations';
 import Bookings from './pages/Bookings';
+import Maintenance from './pages/Maintenance';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route path="/assets" element={<ProtectedRoute><Layout><Assets /></Layout></ProtectedRoute>} />
       <Route path="/allocations" element={<ProtectedRoute><Layout><Allocations /></Layout></ProtectedRoute>} />
       <Route path="/bookings" element={<ProtectedRoute><Layout><Bookings /></Layout></ProtectedRoute>} />
+      <Route path="/maintenance" element={<ProtectedRoute><Layout><Maintenance /></Layout></ProtectedRoute>} />
       <Route path="/" element={<Login />} />
     </Routes>
   );
