@@ -111,7 +111,7 @@ const Assets = () => {
             className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
-        <button type="submit" className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200">
+        <button type="submit" className=" cursor-pointer px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200 border border-gray-500">
           Search
         </button>
       </form>
