@@ -5,6 +5,8 @@ import express from 'express';
 import cors from 'cors';
 import connectDb from './config/db.js';
 import authRoutes from './routes/auth.js'
+import assetRoutes from './routes/asset.js'
+import categoryRoutes from './routes/category.js';
 
 const app = express();
 
@@ -12,8 +14,11 @@ app.use(cors());
 app.use(express.json());
 connectDb();
 
-app.use('/api/auth',authRoutes)
-const PORT = process.env.PORT || 5000;
+// routes
+app.use('/api/auth',authRoutes);
+app.use('/api/assets',assetRoutes);
+app.use('/api/categories', categoryRoutes); 
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, ()=>{
     console.log(`server is running on the http://localhost:${PORT}`)
 })
