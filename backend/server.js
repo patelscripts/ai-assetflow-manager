@@ -10,6 +10,7 @@ import categoryRoutes from './routes/category.js';
 import allocationRoutes from './routes/allocation.js';
 import dashboardRoutes from './routes/dashboard.js';
 import bookingRoutes from './routes/booking.js';
+import userRoutes from './routes/users.js';
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/allocations', allocationRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, ()=>{

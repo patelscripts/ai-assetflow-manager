@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Package, CheckCircle, Wrench, Calendar, AlertTriangle, Clock, Users2 } from 'lucide-react';
 import api from '../api/axios';
+import KpiCard from '../components/KpiCard';
 
 interface DashboardData {
   kpis: {
@@ -56,15 +57,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {cards.map(({ label, value, icon: Icon, color }) => (
-          <div key={label} className="bg-white rounded-xl shadow-sm border border-gray-100 p-5 flex items-center gap-4">
-            <div className={`p-3 rounded-lg ${color}`}>
-              <Icon size={22} />
-            </div>
-            <div>
-              <p className="text-2xl font-bold text-gray-900">{value}</p>
-              <p className="text-sm text-gray-500">{label}</p>
-            </div>
-          </div>
+          <KpiCard key={label} label={label} value={value} icon={Icon} color={color} />
         ))}
       </div>
 
